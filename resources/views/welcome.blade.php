@@ -17,23 +17,20 @@
 
 <body>
     <div class="container">
-        <div class="row gap-5">
+        <div class="row gap-3 justify-content-around">
             @foreach ($movies as $item)
-            <div class="card col-3">
+            <div class="card col-5">
                 <div class="card-body">
-                  <h5 class="card-title">{{$item['title']}}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">{{$item['title']}}</h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+                  <h5 class="card-title">{{$item->title}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{$item->original_title}}</h6>
+                  <p class="card-text">Nationality: <b>{{$item->nationality}}</b></p>
+                  <span class="card-text">Year: <b>{{$item->date}}</b></span>
+                  <span class="card-text">Vote: <b>{{$item->vote}}</b></span>
                 </div>
               </div>
             @endforeach
         </div>
     </div>
-    <h1>
-        ciao
-    </h1>
 
 </body>
 
